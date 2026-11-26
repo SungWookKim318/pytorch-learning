@@ -62,3 +62,10 @@
 ### 예제와 같은 단어들을 벡터화(*word2vec*) 방법 들
 - CBOW(continuous bag-of-words): 주변 단어들로부터 가운데 들어갈 단어가 나오도록 임베딩하는 방식. 즉, 같은 자리에 들어갈 수 있는 단어는 뜻이 비슷한 것을 이용해서 빈칸 채우기를 학습시키고 그 부산물로 의미가 임베딩
 - skip-gram: CBOW와 반대로 단어 중심으로 부터 주변 단오들이 나오도록 학습하여 임베딩 벡터를 얻는 방법.
+
+#### 예시
+
+**the quick brown dog jumps over the lay fox** 에서 fox를 학습하는걸 가정
+- CBOW: 'quick', 'brown', 'jumps' 'over' 라는 단어가 통과하면 fox가 나오도록 모델을 학습하고 그 은닉층의 벡터를 임베딩
+- skip-gram: 'fox' 라는 단어가 들어올 때, 'quick', 'brown', 'jumps' 'over' 단어들이 나오도록 학습
+
